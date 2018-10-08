@@ -1,7 +1,7 @@
 /*
  * Copyright (c) derdeveloper
  * Die hier genutzten Methoden und Klassen sind Implementierungen aus der Craftbukkit API
- * Der hier genutzte Code steht zur freien Verfügung
+ * Der hier genutzte Code steht zur freien VerfÃ¼gung
  */
 
 package com.derdeveloper.system;
