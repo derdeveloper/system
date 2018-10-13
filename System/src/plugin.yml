@@ -1,8 +1,0 @@
-main: com.derdeveloper.system.Main
-name: System
-version: 0.1
-author: derdeveloper
-
-commands:
-     heal:
-          description: Heilt dich oder andere Spieler.
