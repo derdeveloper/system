@@ -12,7 +12,4 @@ Du kannst dir [hier](https://github.com/derdeveloper/system/blob/master/DOWNLOAD
 Achtung: Diese Versionen können Bugs enthalten, die in neueren Versionen des Plugins gefixt wurden.
 
 ## Berechtigungen
-* system.admin - Der Spieler erhält Zugriff auf den /system-Befehl.
-* system.heal - Der Spieler erhält Zugriff auf den /heal-Befehl.
-  - system.heal.other - Der Spieler kann andere Spieler heilen.
-  - system.heal.prevent - Der Spieler kann nicht von anderen Spielern geheilt werden.
+* system.* - Du erhälst alle Berechtigungen des Plugins.
