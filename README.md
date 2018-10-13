@@ -9,4 +9,4 @@ Das Plugin ist nun installiert und wird beim nächsten Neustart des Servers gela
 
 Du kannst dir [hier](https://github.com/derdeveloper/system/blob/master/DOWNLOADS.md) die älteren Versionen dieses Plugins heruntergeladen.
 
-[COLOR=RED]Achtung:[/COLOR] Diese Versionen können Bugs enthalten, die in neueren Versionen des Plugins gefixt wurden.
+Achtung: Diese Versionen können Bugs enthalten, die in neueren Versionen des Plugins gefixt wurden.
