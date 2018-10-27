@@ -15,6 +15,7 @@ public class ConfigManager {
     public ConfigManager(Main plugin) {
         this.plugin = plugin;
         inst = this;
+        loadConfig();
     }
 
     public static ConfigManager getConfig() {
@@ -22,26 +23,11 @@ public class ConfigManager {
     }
 
     public void loadConfig() {
-        // config.yml
-        File config_yml = new File(plugin.getDataFolder(), "config.yml");
-        FileConfiguration config = YamlConfiguration.loadConfiguration(config_yml);
-        config.addDefault("max_health", Double.valueOf(20.0));
-        config.addDefault("max_food", Integer.valueOf(20));
+        File file = new File(plugin.getDataFolder(), "config.yml");
+        FileConfiguration config = YamlConfiguration.loadConfiguration(file);
         config.options().copyDefaults(true);
         try {
-            config.save(config_yml);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-
-        // messages.yml
-        File messages_yml = new File(plugin.getDataFolder(), "messages.yml");
-        FileConfiguration messages = YamlConfiguration.loadConfiguration(messages_yml);
-        messages.addDefault("healed", "&aDu wurdest geheilt.");
-        messages.addDefault("noPerm", "&4Dazu hast du keine Rechte!");
-        messages.options().copyDefaults(true);
-        try {
-            messages.save(messages_yml);
+            config.save(file);
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -51,12 +37,6 @@ public class ConfigManager {
         File config_yml = new File(plugin.getDataFolder(), "config.yml");
         FileConfiguration config = YamlConfiguration.loadConfiguration(config_yml);
         return config.getString(path);
-    }
-
-    public String getMessage(String path) {
-        File messages_yml = new File(plugin.getDataFolder(), "messages.yml");
-        FileConfiguration messages = YamlConfiguration.loadConfiguration(messages_yml);
-        return messages.getString(path);
     }
 
     public Integer getInt(String path) {
@@ -69,5 +49,11 @@ public class ConfigManager {
         File config_yml = new File(plugin.getDataFolder(), "config.yml");
         FileConfiguration config = YamlConfiguration.loadConfiguration(config_yml);
         return config.getDouble(path);
+    }
+
+    public Boolean getBoolean(String path) {
+        File config_yml = new File(plugin.getDataFolder(), "config.yml");
+        FileConfiguration config = YamlConfiguration.loadConfiguration(config_yml);
+        return config.getBoolean(path);
     }
 }

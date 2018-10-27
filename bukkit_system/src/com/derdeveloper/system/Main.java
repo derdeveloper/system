@@ -1,8 +1,9 @@
 package com.derdeveloper.system;
 
+import com.derdeveloper.system.commands.*;
 import com.derdeveloper.system.manager.ConfigManager;
-import com.derdeveloper.system.manager.PlayerManager;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Logger;
@@ -21,9 +22,15 @@ public class Main extends JavaPlugin {
     }
 
     public void registerPlugin() {
-        new PlayerManager(this);
         new ConfigManager(this);
+        new HealCommand(this);
+        new ReloadCommand(this);
+        new PluginsCommand(this);
+        new FeedCommand(this);
+        new StopCommand(this);
+    }
 
-        ConfigManager.getConfig().loadConfig();
+    public static String getPrefix() {
+        return ChatColor.RED + "•" + ChatColor.DARK_RED + "●" + ChatColor.RED + " Server.net " + ChatColor.GRAY + "| " + ChatColor.RESET;
     }
 }

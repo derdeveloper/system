@@ -2,3 +2,14 @@ main: com.derdeveloper.system.Main
 name: System
 author: derdeveloper
 version: 1.0
+
+commands:
+     heal:
+          description: /heal
+          usage: /heal <Spieler>
+     feed:
+          description: /feed
+          usage: /feed <Spieler>
+     eat:
+          description: /eat
+          usage: /eat <Spieler>
